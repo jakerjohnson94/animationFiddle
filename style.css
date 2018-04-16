@@ -1,74 +1,88 @@
 @keyframes bounceIn {
     0% {
+      
+     
       transform: scale(0.1);
       opacity: 0;
     }
-    60% {
+    65% {
       transform: scale(1.2);
       opacity: 1;
     }
     100% {
+      top: 0%;
+     
       transform: scale(1);
+      position: relative;
     }
   }
 
+@keyframes slideIn{
+  from{ top: -50%; }
+  to{ top: 0%;}
+}
+@keyframes slideInRep{
+  0%{ top: 0%;}
+  40%{top: -5%;}
+  100%{
+    top: 0%;
+  }
 
-
+}
+.box{
   
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+
+}
   html, body{
     height: 100%;
   }
 body{
 
-  
-  display: flex;
- justify-content: center;
- align-items: center;
-
 }
-  .box {
-    
-
-   
-  }
 
   div[class^="c"] {
     margin: .2em;
+  position: relative;
+    width: 24px;
+    height: 24px;
+    float: left;
+    border-radius: 15px;
+
+  
   }
   
   .c1 {
-    width: 24px;
-    height: 24px;
-    float: left;
+
     background-color: rgb(156, 179, 199);
-    border-radius: 15px;
-    animation: bounceIn 1.5s ease-in-out;
+   
+    animation: bounceIn 1.5s ease-in, slideIn 1.5s, slideInRep 1.5s ease-in-out infinite;
+    animation-delay: 0s, .1s, 1.8s;
+   
   }
   
   .c2 {
-    width: 24px;
-    height: 24px;
-    float: left;
+  
     background-color: rgb(61, 99, 134);
-    border-radius: 15px;
-    animation: bounceIn 1.7s ease-in-out;
+  
+    animation: bounceIn 1.7s ease-in, slideIn 1.5s, slideInRep 1.5s ease-in-out infinite;
+    animation-delay: 0s, 0.2s, 1.7s;
   }
   
   .c3 {
-    width: 24px;
-    height: 24px;
-    float: left;
+
     background-color: rgb(255, 231, 196);
-    border-radius: 15px;
-    animation: bounceIn 1.62s ease-in-out;
+    animation: bounceIn 1.62s ease-in, slideIn 1.5s, slideInRep 1.5s ease-in-out infinite;
+    animation-delay: 0s, 0.3s, 1.6s;
   }
   
   .c4 {
-    width: 24px;
-    height: 24px;
-    float: left;
+  
     background-color: rgb(58, 116, 168);
-    border-radius: 15px;
-    animation: bounceIn 1.42s ease-in-out;
+    animation: bounceIn 1.42s ease-in, slideIn 1.5s, slideInRep 1.5s ease-in-out infinite;
+    animation-delay: 0s, 0.4s, 1.5s;
   }
   
