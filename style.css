@@ -1,110 +1,98 @@
 @keyframes bounceIn {
-    0% {
-      transform: scale(0.1);
-      opacity: 0;
-    }
-    65% {
-      transform: scale(1.2);
-      opacity: 1;
-    }
-    100% {
-      top: 0%;
-     
-      transform: scale(1);
-  
-    }
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
   }
+  65% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    top: 0%;
 
-@keyframes slideIn{
-  from{ top: -50%; }
-  to{ top: 0%;}
+    transform: scale(1);
+  }
 }
-@keyframes slideInRep{
-  0%{ top: 0%;}
-  40%{top: -5%;}
-  100%{
+
+@keyframes slideIn {
+  from {
+    top: -50%;
+  }
+  to {
+    top: 0%;
+  }
+}
+@keyframes slideInRep {
+  0% {
+    top: 0%;
+  }
+  40% {
+    top: -5%;
+  }
+  100% {
     top: 0%;
   }
 }
 
-@keyframes slide {
+@keyframes slideOut {
   from {
-     
     margin-left: 0%;
   }
 
   to {
     margin-left: 100%;
-
   }
-  
 }
 
-
-  html, body{
-    height: 100%;
-  }
-body{
-
-
-  
-}
-.box{
-    height: 100%;
-  
+div[class^="dot-"] {
+  margin: 0.2em;
   position: relative;
-  left:50%;
-  top:50%;
-  animation: slide .8s ease-in-out forwards;
-  animation-delay: 5s;
+  display: inline;
+  float: left;
+  width: 24px;
+  height: 24px;
 
+  border-radius: 15px;
 }
 
-  div[class^="c"] {
-    margin: .2em;
-    position: relative;
-    display: inline;
-    float: left;
-    width: 24px;
-    height: 24px;
-    
-    border-radius: 15px;
+html,
+body {
+  height: 100%;
+}
 
-  
+.wrapper {
+  height: 100%;
 
-  }
-  
-  .c1 {
+  position: absolute;
+  left: calc(50% - 48px);
+  top: calc(50% - 24px);
+  animation: slideOut 0.8s ease-in-out forwards;
+  animation-delay: 5s;
+}
 
-    background-color: rgb(156, 179, 199);
-   
-    animation: bounceIn 1.5s ease-in, slideIn 1.5s, slideInRep 1.0s ease-in-out 3;
-    animation-delay: 0s, .1s, 2s, 6s;
-   
-  }
-  
-  .c2 {
-  
-    background-color: rgb(61, 99, 134);
-  
-    animation: bounceIn 1.7s ease-in, slideIn 1.5s, slideInRep 1.0s ease-in-out 3; 
-    animation-delay: 0s, 0.2s, 1.9s, 6.1s;
-  }
-  
-  .c3 {
 
-    background-color: rgb(255, 231, 196);
-    animation: bounceIn 1.62s ease-in, slideIn 1.5s, slideInRep 1.0s ease-in-out 3;
-    animation-delay: 0s, 0.3s, 1.8s, 6.2s;
-  }
-  
-  .c4 {
-  
-    background-color: rgb(58, 116, 168);
-    animation: bounceIn 1.42s ease-in, slideIn 1.5s, slideInRep 1.0s ease-in-out 3;
-    animation-delay: 0s, 0.4s, 1.7s, 6.3s;
-  }
-  .b1{
-    height: 1px;
-  }
-  
+.dot-1 {
+  background-color: rgb(156, 179, 199);
+
+  animation: bounceIn 1.5s ease-in, slideIn 1.5s, slideInRep 1s ease-in-out 3;
+  animation-delay: 0s, 0.1s, 2s, 6s;
+}
+
+.dot-2 {
+  background-color: rgb(61, 99, 134);
+
+  animation: bounceIn 1.7s ease-in, slideIn 1.5s, slideInRep 1s ease-in-out 3;
+  animation-delay: 0s, 0.2s, 1.9s, 6.1s;
+}
+
+.dot-3  {
+  background-color: rgb(255, 231, 196);
+  animation: bounceIn 1.62s ease-in, slideIn 1.5s, slideInRep 1s ease-in-out 3;
+  animation-delay: 0s, 0.3s, 1.8s, 6.2s;
+}
+
+.dot-4  {
+  background-color: rgb(58, 116, 168);
+  animation: bounceIn 1.42s ease-in, slideIn 1.5s, slideInRep 1s ease-in-out 3;
+  animation-delay: 0s, 0.4s, 1.7s, 6.3s;
+}
