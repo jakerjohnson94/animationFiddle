@@ -35,11 +35,12 @@
 }
 
 @keyframes slideOut {
-  from {
+  0% {
     margin-left: 0%;
   }
-
-  to {
+  
+  100% {
+    opacity: 0;
     margin-left: 100%;
   }
 }
@@ -47,12 +48,12 @@
 div[class^="dot-"] {
   margin: 0.2em;
   position: relative;
-  display: inline;
-  float: left;
+  display: inline-block;
   width: 24px;
   height: 24px;
-
   border-radius: 15px;
+  white-space: normal;
+  
 }
 
 html,
@@ -68,6 +69,8 @@ body {
   top: calc(50% - 24px);
   animation: slideOut 0.8s ease-in-out forwards;
   animation-delay: 5s;
+
+  white-space: nowrap;
 }
 
 
